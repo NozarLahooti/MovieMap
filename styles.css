@@ -1,0 +1,31 @@
+body {
+    background: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+    font-family: sans-serif;
+  }
+  
+  .container {
+    max-width: 300px;
+    padding: 20px;
+    background: white;
+    border-radius: 16px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease;
+  }
+  
+  .container:hover {
+    transform: translateY(-5px);
+  }
+  
+  .container h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+  }
+  
+  .container p {
+    margin: 8px 0;
+    color: #555;
+  }
+  
