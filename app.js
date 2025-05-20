@@ -1,4 +1,14 @@
+// Make Cards
+const movieList = ["12 Angry Men", "Papillon", "God Father"];
+const container = document.querySelector('.container');
+for (let i = 0; i < movieList.length; i ++){
+    const p = document.createElement('p');
+    p.textContent = movieList[i];
+    container.appendChild(p)
+}
+
 // Add Button Function
+
 function addMovie() {
     const movieName = document.getElementById('movieInput').value.trim();
     if (!movieName) return;  
@@ -10,6 +20,7 @@ function addMovie() {
   }
 
 // Add Button Dynamically Using Function
+
 const button = document.querySelector('#addButton');
 const input = document.getElementById('movieInput');
 
