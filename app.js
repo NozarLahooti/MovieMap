@@ -7,11 +7,17 @@ for (let i = 0; i < movieList.length; i++) {
   container.appendChild(p);
 }
 
-// Add Button Function
+// Add Button Function with Alert
 
 function addMovie() {
   const movieName = document.getElementById("movieInput").value.trim();
-  if (!movieName) return;
+  if (!movieName) {
+    alert("Please enter a movie name!");
+    return;
+  }
+  if (movieName.length < 4) {
+    alert("Movie Name Must Be At Least 4 Letter!")
+  }
   const list = document.getElementById("movieList");
   const li = document.createElement("li");
   li.textContent = movieName;
@@ -48,4 +54,21 @@ myInput.style.borderRadius = '20px';
 myInput.style.padding = '10px';
 myInput.style.fontSize = '16px';
 myInput.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.1)';
+
+// New Box
+
+
+
+const movieList2 = ["Inception", "Interstellar", "Dunkirk"];
+const cardBox2 = document.createElement("div");
+cardBox2.style.border = "1px solid #ccc";
+cardBox2.style.padding = "10px";
+cardBox2.style.borderRadius = "8px";
+
+for (let i = 0; i < movieList2.length; i++) {
+  const p = document.createElement("p");
+  p.textContent = movieList2[i];
+  cardBox2.appendChild(p);
+}
+container.appendChild(cardBox2);
 
