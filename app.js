@@ -16,7 +16,8 @@ function addMovie() {
     return;
   }
   if (movieName.length < 4) {
-    alert("Movie Name Must Be At Least 4 Letter!")
+    alert("Movie Name Must Be At Least 4 Letter!");
+    return
   }
   const list = document.getElementById("movieList");
   const li = document.createElement("li");
@@ -49,15 +50,13 @@ button.style.color = "white";
 
 const h2 = container.firstElementChild;
 const myInput = h2.nextElementSibling;
-myInput.style.border = '1px solid #ccc';
-myInput.style.borderRadius = '20px';
-myInput.style.padding = '10px';
-myInput.style.fontSize = '16px';
-myInput.style.boxShadow = '0 2px 5px rgba(0, 0, 0, 0.1)';
+myInput.style.border = "1px solid #ccc";
+myInput.style.borderRadius = "20px";
+myInput.style.padding = "10px";
+myInput.style.fontSize = "16px";
+myInput.style.boxShadow = "0 2px 5px rgba(0, 0, 0, 0.1)";
 
 // New Box
-
-
 
 const movieList2 = ["Inception", "Interstellar", "Dunkirk"];
 const cardBox2 = document.createElement("div");
@@ -72,3 +71,15 @@ for (let i = 0; i < movieList2.length; i++) {
 }
 container.appendChild(cardBox2);
 
+// Fragment Form
+
+const f = document.createDocumentFragment();
+const user = ["name", "email", "phone"];
+user.forEach((item) => {
+  const input = document.createElement("input");
+  input.type = "text";
+  input.name = item;
+  input.placeholder = item;
+  f.appendChild(input);
+});
+document.getElementById("form").appendChild(f);
