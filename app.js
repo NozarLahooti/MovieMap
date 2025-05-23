@@ -83,3 +83,11 @@ user.forEach((item) => {
   f.appendChild(input);
 });
 document.getElementById("form").appendChild(f);
+
+// Making Responsive 
+
+if (window.innerWidth < 768) {
+  container.style.maxWidth = "280px"; // makes screen smaller on mobile
+} else {
+  container.style.maxWidth = "400px"; // makes screen larger on desktop
+}
