@@ -91,3 +91,10 @@ if (window.innerWidth < 768) {
 } else {
   container.style.maxWidth = "400px"; // makes screen larger on desktop
 }
+
+// Add input event
+
+form.addEventListener("input", e => {
+  if (e.target.name === "email")
+    e.target.style.borderColor = e.target.value.split("@").length > 1 ? "" : "red";
+});
